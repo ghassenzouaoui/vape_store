@@ -1,0 +1,386 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vape store</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id ="g">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./img/logo_vape.jpg" alt="Logo Vape Store" />
+          <h1>Vape Store</h1>
+        </div>
+        <div class="menu">
+          <a href="#accueil">Accueil</a>
+          <a href="#produits">Produits</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <nav class="nav2">
+        <div>
+          <h4>📞:54942408/54942409</h4>
+        </div>
+        <div class="menu">
+          <a href="https://facebook.com" target="_blank">📘</a>
+          <a href="https://instagram.com" target="_blank">📸</a>
+        </div>
+      </nav></header>
+    
+    <main>
+      <!-- Section Accueil avec fond dynamique -->
+      <section class="accueil" id="accueil">
+        <div class="content">
+          <h1>Bienvenue dans notre Vape Store</h1>
+          <p>
+            Découvrez nos produits innovants pour une expérience de vapotage
+            exceptionnelle.
+          </p>
+        </div>
+        <!-- Boutons de flèches gauche et droite -->
+        <div class="nav-buttons">
+          <button class="prev" onclick="changeBackground(-1)">&#10094;</button>
+          <button class="next" onclick="changeBackground(1)">&#10095;</button>
+        </div>
+      </section>
+      <hr>
+      <!-- Liste des produits -->
+      <section class="produits" id="produits">
+        <h2>Nos Produits</h2>
+        <ul>
+          <li><a href="puff.html">Puffs</a></li>
+          <li><a href="vape.html">Vape</a></li>
+          <li><a href="liquide.html">Liquides</a></li>
+        </ul>
+      </section>
+      <hr>
+      <!-- fruite -->
+      <div id="fruit" class="image-carousel">
+        <!-- Image principale -->
+        <div class="main-image">
+            <h3>Lava Fruité</h3>
+           <a href="./liquide.html"><img src="./img/liquide photo/2.jpg" alt="Main Image" id="main-image" /></a>
+        </div>
+    
+        <!-- Liste des images avec flèches -->
+        <div class="image-list">
+            <button class="arrow left-arrow" onclick="navigate1(-1)">&#8592;</button>
+            <div class="images-container" id="images-container">
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 2" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 3" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 4" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+            </div>
+            <button class="arrow right-arrow" onclick="navigate1(1)">&#8594;</button>
+        </div>
+    </div>
+ 
+        <hr>
+      <!-- gourement -->
+      <div id="fruit" class="image-carousel">
+        <!-- Image principale -->
+        <div class="main-image">
+            <h3>Lava Gourmand</h3>
+           <a href="./liquide.html"><img src="./img/liquide photo/3.jpg" alt="Main Image" id="main-image" /></a>
+        </div>
+    
+        <!-- Liste des images avec flèches -->
+        <div class="image-list">
+            <button class="arrow left-arrow" onclick="navigate2(-1)">&#8592;</button>
+            <div class="images-container" id="images-container2">
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 1" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 2" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 3" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/liquide photo/1.jpg" alt="Image 4" onclick="changeMainImage('./img/liquide photo/1.jpg')" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+            </div>
+            <button class="arrow right-arrow" onclick="navigate2(1)">&#8594;</button>
+        </div>
+    </div>
+    <hr>
+      <!-- vape -->
+      <div id="fruit" class="image-carousel">
+        <!-- Image principale -->
+        <div class="main-image">
+            <h3>vape</h3>
+           <a href="./vape.html"><img src="./img/vape_photo/2.jpg" alt="Main Image" id="main-image" /></a>
+        </div>
+    
+        <!-- Liste des images avec flèches -->
+        <div class="image-list">
+            <button class="arrow left-arrow" onclick="navigate3(-1)">&#8592;</button>
+            <div class="images-container" id="images-container3">
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 1" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 2"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 3"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/vape_photo/1.jpg" alt="Image 4"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+            </div>
+            <button class="arrow right-arrow" onclick="navigate3(1)">&#8594;</button>
+        </div>
+    </div>
+    <hr>
+      <!-- puff -->
+      <div id="fruit" class="image-carousel">
+        <!-- Image principale -->
+        <div class="main-image">
+            <h3>Puffs</h3>
+           <a href="./puff.html"><img src="./img/puff_photo/2.jpg" alt="Main Image" id="main-image" /></a>
+        </div>
+   
+        <!-- Liste des images avec flèches -->
+        <div class="image-list">
+            <button class="arrow left-arrow" onclick="navigate4(-1)">&#8592;</button>
+            <div class="images-container" id="images-container4">
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg"alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg" alt="Image 1"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg" alt="Image 1" />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg"alt="Image 2"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg" alt="Image 3"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="./img/puff_photo/1.jpg" alt="Image 4"  />
+                    <b>Name</b>
+                    <p>20dt</p>
+                </div>
+            </div>
+            <button class="arrow right-arrow" onclick="navigate4(1)">&#8594;</button>
+        </div>
+    </div>
+    <hr>
+      <section class="contact" id="contact">
+        <h2>Contactez-nous</h2>
+        <p>
+          Vous avez des questions ou des commentaires ? N'hésitez pas à nous
+          contacter !
+        </p>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Envoyer</button>
+        </form>
+      </section>
+     
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>Vape Store</h3>
+          <p>
+            Votre boutique de confiance pour tous vos besoins en vape. Nous
+            offrons des produits de qualité pour une expérience unique.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#produits">Produits</a></li>
+            <li><a href="#promotions">Promotions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section social">
+          <h4>Suivez-nous</h4>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">📘</a>
+            <a href="https://instagram.com" target="_blank">📸</a>
+            <a href="https://twitter.com" target="_blank">🐦</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024 Vape Store | Tous droits réservés.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
