@@ -613,3 +613,119 @@ form {
     margin: 20px auto; /* Centrer sur la page */
     max-width: 90%; /* Largeur max du conteneur */
   }
+  /* Ajout de media query pour les appareils mobiles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .navbar .menu a {
+        width: 100%;
+        text-align: left;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Section Accueil */
+    .accueil h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .accueil p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Boutons de navigation dans l'accueil */
+    .nav-buttons button {
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+
+    /* Liste des produits */
+    .produits h2 {
+        font-size: 1.8rem;
+        margin: 15px 0;
+    }
+
+    /* Contact */
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    /* Formulaire */
+    form {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .btn-submit {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.4rem;
+    }
+
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+
+    /* Carousel images */
+    .images-container {
+        max-width: 100%;
+    }
+
+    .thumbnail img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .thumbnail {
+        width: 150px;
+        height: auto;
+    }
+
+    /* Flèches de navigation */
+    .arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        margin: 0 5px;
+    }
+}
