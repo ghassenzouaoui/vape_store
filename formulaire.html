@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire</title>
+  <style>
+    /* Style général de la page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background:#E7E7E7 ;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Conteneur du formulaire */
+    form {
+      background: #fff;
+      color: #333;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    /* Titre du formulaire */
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #6a11cb;
+    }
+
+    /* Styles des labels */
+    label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    /* Champs de saisie */
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    /* Focus sur les champs */
+    input:focus {
+      outline: none;
+      border-color: #6a11cb;
+      box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+    }
+
+    /* Bouton de validation */
+    button {
+      background-color: #6a11cb;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    /* Bouton au survol */
+    button:hover {
+      background-color: #2575fc;
+    }
+  </style>
+</head>
+<body>
+    
+  <form>
+    <h1>Formulaire</h1>
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
+
+    <label for="telephone">Téléphone :</label>
+    <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone" required>
+     <!-- Affichage des produits sélectionnés -->
+  <div>
+    <h2>Produits sélectionnés :</h2>
+    <ul id="selected-products"></ul>
+  </div>
+    <h2>Total Price : <span id="total-price-display">0</span> DT</h2>
+      
+    <button type="submit">Confirmer</button>
+
+  </form>
+  <script>
+    // Récupérer les données depuis localStorage
+    const totalPrice = localStorage.getItem("totalPrice");
+    const selectedProducts = JSON.parse(localStorage.getItem("selectedProducts"));
+
+    // Afficher le Total Price
+    document.getElementById("total-price-display").textContent = totalPrice || "0";
+
+    // Afficher les produits sélectionnés avec leurs quantités
+    const productList = document.getElementById("selected-products");
+    if (selectedProducts && selectedProducts.length > 0) {
+      selectedProducts.forEach((product) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `Produit  : ${product.id}, Quantité : ${product.quantity}`;
+        productList.appendChild(listItem);
+      });
+    } else {
+      productList.innerHTML = "<li>Aucun produit sélectionné.</li>";
+    }
+  </script>
+  
+  <script>document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+  
+    // Récupérer les données du formulaire
+    const nom = document.getElementById("nom").value;
+    const prenom = document.getElementById("prenom").value;
+    const telephone = document.getElementById("telephone").value;
+  
+    // Récupérer les produits sélectionnés avec leurs quantités
+    const selectedProducts = JSON.parse(localStorage.getItem("selectedProducts")) || [];
+    const totalPrice = localStorage.getItem("totalPrice") || "0";
+  
+    // Filtrer les produits dont la quantité est supérieure à 0
+    const confirmedProducts = selectedProducts.filter((product) => product.quantity > 0);
+  
+    // Enregistrer les informations dans le localStorage
+    const formData = {
+      nom: nom,
+      prenom: prenom,
+      telephone: telephone,
+      products: confirmedProducts,
+      totalPrice: totalPrice,
+    };
+    
+    // Sauvegarder les données de l'utilisateur et les produits confirmés
+    localStorage.setItem("formData", JSON.stringify(formData));
+  
+    // Rediriger vers la page Admin ou afficher une confirmation
+    alert("Produits confirmés enregistrés !");
+    window.location.href = "admin.html"; // Rediriger vers la page Admin
+  });
+  </script>
+</body>
+</html>

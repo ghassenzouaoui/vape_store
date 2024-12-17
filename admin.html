@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Admin</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://kit.fontawesome.com/1315f09d2e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./img/logo_vape.jpg" alt="Logo Vape Store" />
+      <h1>Admin - Vape Store</h1>
+    </div>
+    <div class="menu">
+      <a href="./index.html#accueil">Accueil</a>
+      <a href="./admin.html">Admin</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="admin-section">
+      <h2>Produits Confirmés</h2>
+      <div id="user-info">
+        <p><strong>Nom:</strong> <span id="nom"></span></p>
+        <p><strong>Prénom:</strong> <span id="prenom"></span></p>
+        <p><strong>Téléphone:</strong> <span id="telephone"></span></p>
+      </div>
+      
+      <div id="confirmed-products">
+        <!-- Produits confirmés s'affichent ici -->
+      </div>
+
+      <h2>Total Price: <span id="total-price-display">0</span> DT</h2><hr>
+    </section>
+  </main>
+
+  <script>
+    // Fonction pour récupérer et afficher les produits confirmés et les infos utilisateur
+    function displayConfirmedProducts() {
+      const formData = JSON.parse(localStorage.getItem("formData"));
+      
+      if (formData) {
+        // Afficher les informations utilisateur
+        document.getElementById("nom").textContent = formData.nom;
+        document.getElementById("prenom").textContent = formData.prenom;
+        document.getElementById("telephone").textContent = formData.telephone;
+
+        // Afficher les produits confirmés
+        const confirmedProducts = formData.products;
+        const totalPrice = formData.totalPrice;
+
+        const productsContainer = document.getElementById("confirmed-products");
+        productsContainer.innerHTML = "";
+
+        if (confirmedProducts.length > 0) {
+          confirmedProducts.forEach((product) => {
+            const productElement = document.createElement("div");
+            productElement.classList.add("product-item");
+
+            productElement.innerHTML = `
+              <h3>${product.name}</h3>
+              <img src="${product.image}" alt="${product.name}" width="100">
+              <p>Quantité: ${product.quantity}</p>
+              <p>Prix Unitaire: ${product.price} DT</p>
+            `;
+
+            productsContainer.appendChild(productElement);
+          });
+
+          // Afficher le total des produits
+          document.getElementById("total-price-display").textContent = totalPrice;
+        } else {
+          productsContainer.innerHTML = "<p>Aucun produit confirmé pour le moment.</p>";
+        }
+      }
+    }
+
+    // Appeler la fonction lors du chargement de la page
+    window.onload = displayConfirmedProducts;
+  </script>
+</body>
+</html>

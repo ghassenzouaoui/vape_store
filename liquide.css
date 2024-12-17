@@ -196,3 +196,19 @@ i {
       font-size: 20px;
   }
 }
+#acheter-btn {
+  background-color: #4CAF50; /* Vert */
+  color: white; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  padding: 10px 20px; /* Espacement interne */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Pas de soulignement */
+  display: inline-block; /* Comportement en ligne */
+  font-size: 16px; /* Taille de la police */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur au survol */
+}
+
+#acheter-btn:hover {
+  background-color: #45a049; /* Couleur au survol */
+}

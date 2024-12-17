@@ -12,48 +12,9 @@
 body {
     background-color: #f4f4f9; 
 }
-/*nav2*/
-/* Style de la barre de navigation */
-.nav2 {
-    width: 100%;
-    background-color: #333; /* Couleur de fond sombre */
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    padding: 10px 20px;
-}
-
-/* Style pour la partie contact */
-.nav2 h4 {
-    font-size: 1.2rem;
-    margin: 0;
-    font-weight: normal;
-}
-
-/* Style du menu (réseaux sociaux) */
-.nav2 .menu {
-    display: flex;
-    gap: 15px; /* Espacement entre les icônes */
-}
-
-/* Style pour les liens des réseaux sociaux */
-.nav2 .menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
-    transition: color 0.3s ease;
-}
-
-.nav2 .menu a:hover {
-    color: #ff5c8d; /* Changer la couleur au survol */
-}
-
-
 /* Navbar */
 .navbar {
-    
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,6 +64,46 @@ body {
     background-color: #ff5c8d;
     color: #fff;
 }
+/*nav2*/
+/* Style de la barre de navigation */
+.nav2 {
+    width: 100%;
+    background-color: #333; /* Couleur de fond sombre */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    padding: 10px 20px;
+}
+
+/* Style pour la partie contact */
+.nav2 h4 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Style du menu (réseaux sociaux) */
+.nav2 .menu {
+    display: flex;
+    gap: 15px; /* Espacement entre les icônes */
+}
+
+/* Style pour les liens des réseaux sociaux */
+.nav2 .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav2 .menu a:hover {
+    color: #ff5c8d; /* Changer la couleur au survol */
+}
+
+
+
 
 /* Animation au survol pour les éléments de menu */
 .navbar .menu a:focus, .navbar .menu a:hover {
