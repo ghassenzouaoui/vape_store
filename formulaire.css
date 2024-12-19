@@ -1,0 +1,85 @@
+ /* Style général de la page */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:#E7E7E7 ;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* Conteneur du formulaire */
+  form {
+    background: #fff;
+    color: #333;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+  }
+
+  /* Titre du formulaire */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #6a11cb;
+  }
+
+  /* Styles des labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  /* Champs de saisie */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  /* Focus sur les champs */
+  input:focus {
+    outline: none;
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+  }
+
+  /* Bouton de validation */
+  button {
+    background-color: #6a11cb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+
+  /* Bouton au survol */
+  button:hover {
+    background-color: #2575fc;
+  }
+  #selected-products {
+    list-style: none;
+    padding: 0;
+  }
+  #selected-products li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }

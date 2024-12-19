@@ -28,6 +28,7 @@
         <p><strong>Téléphone:</strong> <span id="telephone"></span></p>
       </div>
       
+      
       <div id="confirmed-products">
         <!-- Produits confirmés s'affichent ici -->
       </div>
@@ -36,49 +37,6 @@
     </section>
   </main>
 
-  <script>
-    // Fonction pour récupérer et afficher les produits confirmés et les infos utilisateur
-    function displayConfirmedProducts() {
-      const formData = JSON.parse(localStorage.getItem("formData"));
-      
-      if (formData) {
-        // Afficher les informations utilisateur
-        document.getElementById("nom").textContent = formData.nom;
-        document.getElementById("prenom").textContent = formData.prenom;
-        document.getElementById("telephone").textContent = formData.telephone;
-
-        // Afficher les produits confirmés
-        const confirmedProducts = formData.products;
-        const totalPrice = formData.totalPrice;
-
-        const productsContainer = document.getElementById("confirmed-products");
-        productsContainer.innerHTML = "";
-
-        if (confirmedProducts.length > 0) {
-          confirmedProducts.forEach((product) => {
-            const productElement = document.createElement("div");
-            productElement.classList.add("product-item");
-
-            productElement.innerHTML = `
-              <h3>${product.name}</h3>
-              <img src="${product.image}" alt="${product.name}" width="100">
-              <p>Quantité: ${product.quantity}</p>
-              <p>Prix Unitaire: ${product.price} DT</p>
-            `;
-
-            productsContainer.appendChild(productElement);
-          });
-
-          // Afficher le total des produits
-          document.getElementById("total-price-display").textContent = totalPrice;
-        } else {
-          productsContainer.innerHTML = "<p>Aucun produit confirmé pour le moment.</p>";
-        }
-      }
-    }
-
-    // Appeler la fonction lors du chargement de la page
-    window.onload = displayConfirmedProducts;
-  </script>
+  
 </body>
 </html>
