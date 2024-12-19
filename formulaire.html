@@ -72,6 +72,9 @@
     <label for="telephone">Téléphone :</label>
     <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone" required>
 
+    <label for="adresse">adresse :</label>
+    <input type="text" id="adresse" name="adresse" placeholder="Entrez votre adresse" required>
+
     <!-- Affichage des produits sélectionnés -->
     <div>
       <h2>Produits sélectionnés :</h2>
@@ -107,15 +110,15 @@
       const nom = document.getElementById("nom").value;
       const prenom = document.getElementById("prenom").value;
       const telephone = document.getElementById("telephone").value;
-
+      const adresse = document.getElementById("adresse").value;
       // Vérifier si tous les champs sont remplis
-      if (!nom || !prenom || !telephone) {
+      if (!nom || !prenom || !telephone || !adresse) {
         alert("Veuillez remplir tous les champs.");
         return;
       }
 
       // Préparer le message WhatsApp
-      let message = `Nom : ${nom}\nPrénom : ${prenom}\nTéléphone : ${telephone}\n\nProduits sélectionnés :\n`;
+      let message = `Nom : ${nom}\nPrénom : ${prenom}\nTéléphone : ${telephone}\nAdresse : ${adresse}\n\nProduits sélectionnés :\n`;
 
       if (selectedProducts && selectedProducts.length > 0) {
         selectedProducts.forEach((product) => {
