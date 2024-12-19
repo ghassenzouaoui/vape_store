@@ -106,3 +106,16 @@ function redirectToForm() {
   
 //form
   
+function redirectToForm() {
+    // Récupérer le texte du titre
+    const titre = document.getElementById("titre").textContent.trim();
+
+    // Enregistrer le titre dans localStorage
+    localStorage.setItem("titre", titre);
+
+    // Vérification dans la console (debugging)
+    console.log("Titre enregistré :", localStorage.getItem("titre"));
+
+    // Rediriger vers la page formulaire.html
+    window.location.href = "formulaire.html";
+}

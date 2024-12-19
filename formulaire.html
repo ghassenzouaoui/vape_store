@@ -1,57 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire</title>
-  <link rel="stylesheet" href="./formulaire.css">
-</head>
-<body>
-    
-  <form>
-    <h1>Formulaire</h1>
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
-
-    <label for="prenom">Prénom :</label>
-    <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
-
-    <label for="telephone">Téléphone :</label>
-    <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone" required>
-     
-  <div>
-    <h2>Produits sélectionnés :</h2>
-    <ul id="selected-products"></ul>
-  </div>
-    <h2>Total Price : <span id="total-price-display">0</span> DT</h2>
-      
-    <button type="submit">Confirmer</button>
-
-  </form>
-  
-  <script>
-    // Récupérer les données depuis localStorage
-    const totalPrice = localStorage.getItem("totalPrice");
-    const selectedProducts = JSON.parse(localStorage.getItem("selectedProducts"));
-
-    // Afficher le Total Price
-    document.getElementById("total-price-display").textContent = totalPrice || "0";
-
-    // Afficher les produits sélectionnés avec leurs quantités
-    const productList = document.getElementById("selected-products");
-    if (selectedProducts && selectedProducts.length > 0) {
-      selectedProducts.forEach((product) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = `${product.quantity} ${product.id} `;
-        productList.appendChild(listItem);
-      });
-    } else {
-      productList.innerHTML = "<li>Aucun produit sélectionné.</li>";
-    }
-  </script>
-
-</body>
-</html>-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -77,6 +23,7 @@
 
     <!-- Affichage des produits sélectionnés -->
     <div>
+      <h2 id="form-title"></h2>
       <h2>Produits sélectionnés :</h2>
       <ul id="selected-products"></ul>
     </div>
@@ -136,6 +83,18 @@
       // Rediriger vers WhatsApp
       window.open(whatsappUrl, "_blank");
     });
+
+
+  // Récupérer le titre depuis localStorage
+  const titre = localStorage.getItem("titre");
+
+// Vérifier si le titre existe et l'afficher
+if (titre) {
+  document.getElementById("form-title").textContent = titre;
+} else {
+  document.getElementById("form-title").textContent = "Titre non disponible";
+}
+
   </script>
 </body>
 </html>
