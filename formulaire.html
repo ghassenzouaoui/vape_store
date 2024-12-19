@@ -95,7 +95,7 @@
     if (selectedProducts && selectedProducts.length > 0) {
       selectedProducts.forEach((product) => {
         const listItem = document.createElement("li");
-        listItem.textContent = `${product.quantity} ${product.id} `;
+        listItem.textContent = `${product.quantity} ${product.id}`;
         productList.appendChild(listItem);
       });
     } else {
@@ -127,8 +127,8 @@
 
       message += `\nTotal : ${totalPrice || 0} DT`;
 
-      // Encoder le message et générer le lien WhatsApp
-      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+      // Encoder le message et générer le lien WhatsApp avec le numéro 47025199
+      const whatsappUrl = `https://wa.me/21654942408?text=${encodeURIComponent(message)}`;
 
       // Rediriger vers WhatsApp
       window.open(whatsappUrl, "_blank");
@@ -136,4 +136,3 @@
   </script>
 </body>
 </html>
-
