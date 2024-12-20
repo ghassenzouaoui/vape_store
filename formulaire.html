@@ -30,6 +30,7 @@
     <h2>Total Price : <span id="total-price-display">0</span> DT</h2>
 
     <button type="button" id="confirm-button">Confirmer</button>
+    
   </form>
 
   <script>
@@ -58,14 +59,15 @@
       const prenom = document.getElementById("prenom").value;
       const telephone = document.getElementById("telephone").value;
       const adresse = document.getElementById("adresse").value;
+      const titre = document.getElementById("form-title").value;
       // Vérifier si tous les champs sont remplis
-      if (!nom || !prenom || !telephone || !adresse) {
+      if (!nom || !prenom || !telephone || !adresse ) {
         alert("Veuillez remplir tous les champs.");
         return;
       }
 
       // Préparer le message WhatsApp
-      let message = `Nom : ${nom}\nPrénom : ${prenom}\nTéléphone : ${telephone}\nAdresse : ${adresse}\n\nProduits sélectionnés :\n`;
+      let message = `Nom : ${nom}\nPrénom : ${prenom}\nTéléphone : ${telephone}\n ${titre}\n\nAdresse : ${adresse}\n\nProduits sélectionnés :\n`;
 
       if (selectedProducts && selectedProducts.length > 0) {
         selectedProducts.forEach((product) => {
@@ -85,15 +87,15 @@
     });
 
 
-  // Récupérer le titre depuis localStorage
-  const titre = localStorage.getItem("titre");
+//   // Récupérer le titre depuis localStorage
+//   const titre = localStorage.getItem("titre");
 
-// Vérifier si le titre existe et l'afficher
-if (titre) {
-  document.getElementById("form-title").textContent = titre;
-} else {
-  document.getElementById("form-title").textContent = "Titre non disponible";
-}
+// // Vérifier si le titre existe et l'afficher
+// if (titre) {
+//   document.getElementById("form-title").textContent = titre;
+// } else {
+//   document.getElementById("form-title").textContent = "Titre non disponible";
+// }
 
   </script>
 </body>
